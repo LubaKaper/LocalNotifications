@@ -13,6 +13,9 @@
 		8D8B241D23FEE12F0005DE7E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D8B241B23FEE12F0005DE7E /* Main.storyboard */; };
 		8D8B241F23FEE1320005DE7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D8B241E23FEE1320005DE7E /* Assets.xcassets */; };
 		8D8B242223FEE1320005DE7E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D8B242023FEE1320005DE7E /* LaunchScreen.storyboard */; };
+		8D8B242A23FEE8B70005DE7E /* CreateNotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8B242923FEE8B70005DE7E /* CreateNotificationsViewController.swift */; };
+		8D8B242C23FEEB0B0005DE7E /* PendingNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8B242B23FEEB0B0005DE7E /* PendingNotification.swift */; };
+		8D8B242E23FEF3D50005DE7E /* duck.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8B242D23FEF3D50005DE7E /* duck.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		8D8B241E23FEE1320005DE7E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8D8B242123FEE1320005DE7E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8D8B242323FEE1320005DE7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D8B242923FEE8B70005DE7E /* CreateNotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNotificationsViewController.swift; sourceTree = "<group>"; };
+		8D8B242B23FEEB0B0005DE7E /* PendingNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PendingNotification.swift; sourceTree = "<group>"; };
+		8D8B242D23FEF3D50005DE7E /* duck.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = duck.png; path = ../../../Downloads/duck.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,10 +65,13 @@
 				8D8B241523FEE12F0005DE7E /* AppDelegate.swift */,
 				8D8B241723FEE12F0005DE7E /* SceneDelegate.swift */,
 				8D8B241923FEE12F0005DE7E /* NotificationsViewController.swift */,
+				8D8B242D23FEF3D50005DE7E /* duck.png */,
 				8D8B241B23FEE12F0005DE7E /* Main.storyboard */,
 				8D8B241E23FEE1320005DE7E /* Assets.xcassets */,
 				8D8B242023FEE1320005DE7E /* LaunchScreen.storyboard */,
 				8D8B242323FEE1320005DE7E /* Info.plist */,
+				8D8B242923FEE8B70005DE7E /* CreateNotificationsViewController.swift */,
+				8D8B242B23FEEB0B0005DE7E /* PendingNotification.swift */,
 			);
 			path = LocalNotifications;
 			sourceTree = "<group>";
@@ -127,6 +136,7 @@
 			files = (
 				8D8B242223FEE1320005DE7E /* LaunchScreen.storyboard in Resources */,
 				8D8B241F23FEE1320005DE7E /* Assets.xcassets in Resources */,
+				8D8B242E23FEF3D50005DE7E /* duck.png in Resources */,
 				8D8B241D23FEE12F0005DE7E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,8 +149,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D8B241A23FEE12F0005DE7E /* NotificationsViewController.swift in Sources */,
+				8D8B242C23FEEB0B0005DE7E /* PendingNotification.swift in Sources */,
 				8D8B241623FEE12F0005DE7E /* AppDelegate.swift in Sources */,
 				8D8B241823FEE12F0005DE7E /* SceneDelegate.swift in Sources */,
+				8D8B242A23FEE8B70005DE7E /* CreateNotificationsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -55,7 +55,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="S60-AU-3Yz"/>
+                    <navigationItem key="navigationItem" id="S60-AU-3Yz">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="nad-6w-PPn">
+                            <connections>
+                                <segue destination="9rD-F8-5Tg" kind="presentation" id="aR2-W3-8kY"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="pZW-g0-cma" id="VtE-fb-Q3t"/>
                     </connections>
@@ -63,6 +69,53 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="126.5625"/>
+        </scene>
+        <!--Create Notification-->
+        <scene sceneID="sSZ-UH-RD2">
+            <objects>
+                <viewController id="rfq-Ct-YSn" customClass="CreateNotificationsViewController" customModule="LocalNotifications" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZSl-Kr-zBQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter a title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6lQ-Ba-XIC">
+                                <rect key="frame" x="20" y="76" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textField>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="zCX-9S-3Mk">
+                                <rect key="frame" x="0.0" y="150" width="414" height="216"/>
+                                <connections>
+                                    <action selector="datePickerChanged:" destination="rfq-Ct-YSn" eventType="valueChanged" id="zqv-h1-06o"/>
+                                </connections>
+                            </datePicker>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6lQ-Ba-XIC" firstAttribute="top" secondItem="OJb-EM-LUq" secondAttribute="top" constant="20" id="DOt-eK-t30"/>
+                            <constraint firstItem="zCX-9S-3Mk" firstAttribute="top" secondItem="6lQ-Ba-XIC" secondAttribute="bottom" constant="40" id="Nfn-Fx-jJx"/>
+                            <constraint firstItem="OJb-EM-LUq" firstAttribute="trailing" secondItem="6lQ-Ba-XIC" secondAttribute="trailing" constant="20" id="Z45-hw-pWS"/>
+                            <constraint firstItem="6lQ-Ba-XIC" firstAttribute="leading" secondItem="OJb-EM-LUq" secondAttribute="leading" constant="20" id="eTd-Ga-PRN"/>
+                            <constraint firstItem="zCX-9S-3Mk" firstAttribute="leading" secondItem="OJb-EM-LUq" secondAttribute="leading" id="zFx-Ee-axA"/>
+                            <constraint firstItem="zCX-9S-3Mk" firstAttribute="trailing" secondItem="OJb-EM-LUq" secondAttribute="trailing" id="zkj-wG-4Mv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="OJb-EM-LUq"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Create Notification" id="6a1-ha-o6u">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="6NJ-Mm-9yC">
+                            <connections>
+                                <action selector="doneButtonPressed:" destination="rfq-Ct-YSn" id="bqN-1l-iHe"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="datePicker" destination="zCX-9S-3Mk" id="E4b-aE-4rK"/>
+                        <outlet property="titleTextField" destination="6lQ-Ba-XIC" id="SML-nb-spG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="85l-mj-fxO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1957.9710144927537" y="-708.48214285714278"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="C7s-o7-jDN">
@@ -82,5 +135,26 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="126.5625"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="UVK-mb-RMI">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9rD-F8-5Tg" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3hB-X1-geo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="rfq-Ct-YSn" kind="relationship" relationship="rootViewController" id="rXE-km-olB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gcJ-t0-oby" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="-708.48214285714278"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="plus" catalog="system" width="64" height="56"/>
+    </resources>
 </document>
